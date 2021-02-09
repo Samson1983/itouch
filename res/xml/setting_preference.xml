@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+    <PreferenceCategory android:title="常用设置">     
+        <com.zhuoyu.view.preference.ToggleButton2Preference
+  			android:key="startFroth" android:title="启用锁屏" android:summary="请按”体验”按钮或电源键体验锁屏效果"
+  			android:persistent="true" />
+<!--         <com.zhuoyu.view.preference.CustToggleButtonPreference
+  			android:key="CustToggleButton" android:title="启用锁屏" android:summary="请按”体验”按钮或电源键体验锁屏效果"
+  			android:persistent="true" />
+        <com.zhuoyu.view.preference.ButtonPreference
+  			android:key="experienceButton" android:title="预览锁屏" android:summary="体验锁屏效果"
+  			android:persistent="true" />
+ --> 	
+ 		
+ 	<!-- 	<ListPreference
+            android:dialogTitle="选择一个"
+            android:entries="@array/list_entries"
+            android:entryValues="@array/list_entries_value"
+            android:key="list_preference"
+            android:summary="选择透明背景或桌面壁纸"
+            android:title="背景设置" /> -->
+
+<!--         <com.zhuoyu.view.preference.RadioPreference
+            android:key="no_pwd"
+            android:title="@string/no_pwd"
+            android:widgetLayout="@layout/main" /> -->
+	          
+	</PreferenceCategory>
+    
+    
+<!--     <PreferenceCategory android:title="常用设置">	
+       <com.zhuoyu.view.preference.ImageButton2Preference android:title="选择图片" android:key="Tranp" android:summary="点击选择图片" android:persistent="true" />
+    </PreferenceCategory> -->
+    
+    <PreferenceCategory android:title="泡泡设置">
+        <com.zhuoyu.view.preference.ImageButton2Preference android:title="选择图片" android:key="Tranp" android:summary="点击选择图片" android:persistent="true"  />        
+        
+        <!-- <CheckBoxPreference android:title="泡1：长按打开" android:key="开启截屏功能" android:summary="摇晃手机即可截图（在QQ外截图需root权限）" android:defaultValue="false" />
+        <CheckBoxPreference android:title="上报我的地理位置" android:key="上报我的地理位置" android:summary="上报地理位置信息以便附近的人能够找到我" android:defaultValue="false" />
+        <PreferenceScreen android:title="查看流量统计" android:summary="使用手机QQ所产生的上行和下行流量">
+            <intent android:targetPackage="com.zhuoyu.view.preference" android:targetClass="com.zhuoyu.view.preference.TrafficStatActivity" />
+        </PreferenceScreen> -->
+    </PreferenceCategory>       
+
+    
+    <PreferenceCategory android:title="音效与振动设置" >  
+        <!-- <CheckBoxPreference android:title="音效" android:key="musice" android:summary="解锁音效" android:defaultValue="true" /> -->
+ 	    <com.zhuoyu.view.preference.CustSeekBarPreferenceMusic android:key="musicValue" android:title="音效" android:summary="解锁音效" android:persistent="true" />        
+        <CheckBoxPreference android:title="振动" android:key="vibrate" android:summary="解锁振动" android:defaultValue="true" />
+    </PreferenceCategory>
+        
+    <PreferenceCategory android:title="个性化设置">	
+ 	   <CheckBoxPreference android:title="全屏设置" android:key="fillScreen" android:summary="去掉顶部状态栏" android:defaultValue="false" />
+ 	   <com.zhuoyu.view.preference.CustSeekBarPreference android:key="frothSpeed" android:title="泡泡运动速度" android:summary="需要40积分" android:persistent="true" /> 	   
+       <com.zhuoyu.view.preference.RadioPreference android:title="背景设置|透明|桌面避纸" android:key="Tranp" android:summary="选择透明背景或桌面壁纸" android:persistent="true" />
+        <!-- <CheckBoxPreference android:title="自动接收图片" android:key="自动接收图片" android:summary="GPRS,3G网络下自动接收并显示图片" android:defaultValue="false" /> -->
+        
+                       <!-- title字段,标记位：title|radio1name|radio2name-->
+        <com.zhuoyu.view.preference.RadioPreference android:title="泡泡1(..待续)|手电|无" android:key="froth1" 
+            android:summary="请选择长按泡泡2秒,打开的程序" android:persistent="true"  android:enabled="false" 
+             />
+        <com.zhuoyu.view.preference.RadioPreference android:title="泡泡2(..待续)|闹钟|无" android:key="froth2"
+            android:summary="请选择长按泡泡2秒,打开的程序" android:persistent="true"  android:enabled="false"  
+            />
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:title="帮助">
+        <PreferenceScreen android:title="紧急解锁" android:summary="长按返回键5秒" />            
+        <PreferenceScreen android:title="应用动态" android:summary="腾讯微博">
+            <intent android:action="android.intent.action.VIEW" android:data="http://t.qq.com/hezhenfei" />
+        </PreferenceScreen>
+<!--         <PreferenceScreen android:title="好友设置" android:summary="好友设置">
+            <intent android:targetPackage="com.zhuoyu.view.preference" android:targetClass="com.zhuoyu.view.preference.FriendInfoActivity" />
+        </PreferenceScreen> -->
+    </PreferenceCategory>
+</PreferenceScreen>

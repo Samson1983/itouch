@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="CustomWindowTitleBackground">
+        <item name="android:background">@drawable/skinpic_green</item>
+    </style>
+    
+     <style name="CustomWindowTitleText" >  
+          <item name="android:textSize">20dip</item>  
+          <item name="android:textColor">#FFffffff</item>  
+          <item name="android:paddingLeft">10dp</item>
+     </style> 
+    
+    
+    <style name="customCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_checkbox</item>
+    </style>
+    
+<!--    <style name="customRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">-->
+<!--        <item name="android:button">@drawable/selector_checkbox</item>-->
+<!--    </style>-->
+    
+    <style name="customListView" parent="@android:style/Widget.ListView">
+        <item name="android:scrollbarSize">10.0dip</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_vertical</item>
+        <item name="android:listSelector">@drawable/selector_list</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+    
+<!--    <style name="customEditText" parent="@android:style/Widget.EditText">-->
+<!--        <item name="android:background">@drawable/selector_edit_text</item>-->
+<!--    </style>-->
+<!--    -->
+<!--    <style name="customAutoCompleteTextView" parent="@android:style/Widget.AutoCompleteTextView">-->
+<!--        <item name="android:background">@drawable/selector_edit_text</item>-->
+<!--    </style>-->
+<!--    -->
+<!--    <style name="customExpandableListView" parent="@android:style/Widget.ExpandableListView">-->
+<!--        <item name="android:scrollbarSize">10.0dip</item>-->
+<!--        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_vertical</item>-->
+<!--        <item name="android:persistentDrawingCache">all</item>-->
+<!--        <item name="android:alwaysDrawnWithCache">true</item>-->
+<!--        <item name="android:listSelector">@drawable/selector_list</item>-->
+<!--        <item name="android:scrollingCache">true</item>-->
+<!--        <item name="android:cacheColorHint">@color/window_bg</item>-->
+<!--        <item name="android:childDivider">@drawable/shape_line</item>-->
+<!--        <item name="android:divider">@null</item>-->
+<!--        <item name="android:dividerHeight">1.0px</item>-->
+<!--    </style>-->
+    
+    <style name="Default.NoTitleBar" parent="@android:style/Theme.Light.NoTitleBar">
+		<item name="android:textColorPrimaryInverse">@android:color/black</item>   	
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleSize">42.0dip</item>
+        <item name="android:windowTitleStyle">@style/CustomWindowTitleText</item> 
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+        <item name="android:checkboxStyle">@style/customCheckBox</item>
+        <item name="android:listViewStyle">@style/customListView</item>
+        
+<!--        <item name="android:autoCompleteTextViewStyle">@style/customAutoCompleteTextView</item>-->
+<!--        <item name="android:editTextStyle">@style/customEditText</item>-->
+<!--        <item name="android:expandableListViewStyle">@style/customExpandableListView</item>-->
+<!--        <item name="android:radioButtonStyle">@style/customRadioButton</item>-->
+        
+    </style>
+    
+    
+    <style name="Default" parent="@style/Default.NoTitleBar" >
+        <item name="android:windowNoTitle">false</item>
+    </style> 
+    
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="Theme" parent="android:Theme.Wallpaper" />
+
+    <style name="transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+<!--  <style name="translucent">
+  <item name="android:windowBackground">@color/transparent</item>
+  <item name="android:windowIsTranslucent">true</item>
+  <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+ </style> -->
+
+    
+
+    <style name="PersonalizationTransparent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>    
+    
+
+
+	<style name="AlertDialogCustom" parent="@android:style/Animation.Dialog" > 
+        <item name="android:textColor">#00FF00</item> 
+        <item name="android:typeface">monospace</item> 
+        <item name="android:textSize">10sp</item> 
+    </style> 
+
+    
+	<style name="main_tab_bottom">
+		<item name="android:textSize">@dimen/bottom_tab_font_size</item>
+	    <item name="android:textColor">#ffffffff</item>
+	    <item name="android:ellipsize">marquee</item>
+	    <item name="android:gravity">center_horizontal</item>
+	    <item name="android:background">@drawable/home_btn_bg</item>
+	    <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:button">@null</item>
+	    <item name="android:singleLine">true</item>
+	    <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
+	    <item name="android:layout_weight">1.0</item>
+	</style>   
+	
+	
+</resources>
+
+
+
+
+
+<!-- item name=android:textColorPrimaryInverse 					preference标题文本颜色	-->
+<!-- item name="android:windowBackground"						窗体背景	-->
+<!-- item name=android:windowTitleBackgroundStyle				窗体标题背景风格-->
+<!-- item name="android:windowTitleSize"  						窗体标题栏高度-->					
+<!-- item name="android:listViewStyle"							preference是一个LISTVIEW，这里设置该风格-->
+<!-- item name="android:textColorPrimary"						preference一级文本颜色-->
+<!-- item name="android:textColorSecondary"						preference二级文本颜色-->
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.zhuoyu.view"
+      android:versionCode="1"
+      android:versionName="1.0">
+
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" 
+        >
+        
+		<activity android:name="cn.waps.OffersWebView" android:configChanges="keyboardHidden|orientation" />
+        <meta-data android:name="APP_ID" android:value="dce9b8b24b9b45fe18d7b37e6021898e" />
+        <meta-data android:name="APP_PID" android:value="gfan" />
+        
+                
+
+        <activity android:name=".TabHostSample"             
+           android:theme="@style/Default"
+           android:configChanges="keyboardHidden|orientation"
+            >
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            </activity>
+        <activity android:name=".SportActivity"  
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait"
+            >
+        <!--  android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" -->
+ 		<!-- android:screenOrientation="portrait"  只能纵向    -->          
+        <!-- android:theme="@style/Theme"     使用背景图片-->
+        </activity>
+        
+        <activity android:name=".SettingActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/Default"
+                  android:configChanges="keyboardHidden|orientation" 
+                  >
+
+        </activity>
+        
+		        
+		<service android:name=".lock.LockService" />
+		
+		<receiver android:name=".lock.MyReceiver" android:label="@string/app_name"> 
+		    <intent-filter> 
+		       <action android:name="android.intent.action.BOOT_COMPLETED" /> 
+		       <!-- Service开机自动启动     -->
+		    </intent-filter> 
+		</receiver>
+		
+		<!-- <service android:name=".MyService"  />  -->
+		<service android:name=".lock.LockKeyguardService"   /> 
+   
+    </application>
+    
+   	<!-- <uses-sdk android:minSdkVersion="8" /> 不可以指定-->
+   	<!-- 广告要求权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> 
+   	
+	<!-- 锁的权限-->
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"></uses-permission>
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<!-- 振动权限-->
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- 写磁盘权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	
+	<uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+	<!-- Home 权限 -->
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+
+    
+    
+</manifest>
